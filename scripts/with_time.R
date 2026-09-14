@@ -4,13 +4,6 @@ library(ggrepel)
 library(dplyr)
 library(ragg)
 
-# =========================================================
-# 1. INPUT
-# =========================================================
-
-# pasta com copia de todas as figuras usadas na tese, nomeadas pelo numero
-# de figura do capitulo de Resultados (facil de saber qual grafico e qual,
-# sobretudo neste script onde as comparacoes envolvem tempo/dpi)
 figuras_tese_dir <- "/Users/mariliaandrade/Desktop/Tese/resultados_final2/figuras_tese"
 dir.create(figuras_tese_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -53,9 +46,7 @@ coldata$Condition <- factor(
 
 coldata$Tissue <- factor(trimws(coldata$Tissue))
 
-# =========================================================
-# 2. OUTPUT PATHS
-# =========================================================
+
 
 base_path_tempo <- "/Users/mariliaandrade/Desktop/Tese/resultados_final/tempo"
 
@@ -96,9 +87,7 @@ for (d in all_dirs) {
   dir.create(d, recursive = TRUE, showWarnings = FALSE)
 }
 
-# =========================================================
-# 3. FUNCTIONS
-# =========================================================
+
 
 prepare_res_df <- function(res, remove_loc = FALSE) {
   df <- as.data.frame(res)
@@ -193,8 +182,6 @@ plot_volcano <- function(res, title, path_plot,
   df$Highlight <- df$Gene %in% highlight_genes
   df_highlight <- df[df$Highlight, ]
 
-  # rotular APENAS os genes destacados no texto; se nao houver nenhum,
-  # rotular só os top_n_label mais significativos - nunca a nuvem toda
   if (nrow(df_highlight) > 0) {
     ord <- match(highlight_genes, df_highlight$Gene)
     ord <- ord[!is.na(ord)]
@@ -280,7 +267,6 @@ save_all_outputs <- function(res, prefix, title,
                              fig_num = NULL,
                              fig_label = NULL) {
 
-  # com LOCs (Material Suplementar - sem copia em figuras_tese)
   save_result_tables(
     res = res,
     out_dir = out_dir_comloc,
@@ -298,7 +284,6 @@ save_all_outputs <- function(res, prefix, title,
     highlight_genes = highlight_genes
   )
 
-  # sem LOCs (usado no corpo da tese - com copia em figuras_tese)
   save_result_tables(
     res = res,
     out_dir = out_dir_semloc,
@@ -319,7 +304,6 @@ save_all_outputs <- function(res, prefix, title,
   )
 }
 
-# numero da figura no capitulo de Resultados, por comparacao temporal
 fig_lookup_tempo <- list(
   "RHDV_4DPI_vs_CONTROL_14DPI"  = "Figure23",
   "RCV_4DPI_vs_CONTROL_14DPI"   = "Figure24",
@@ -331,8 +315,7 @@ fig_lookup_tempo <- list(
   "RCV_14DPI_vs_4DPI"           = "Figure30"
 )
 
-# genes citados no texto dos Resultados, por comparacao temporal — usados
-# para destacar os mesmos genes nos volcano plots do time-course
+
 highlight_tempo <- list(
   "RHDV_14DPI_vs_4DPI" = c("TMEM86A", "FPR1", "FCGR2A", "IL1R2", "CLEC1A", "NREP",
                            "MYO7A", "FCER1G", "RTP4", "ESAM", "XAF1", "OAS1",
@@ -379,13 +362,7 @@ run_deseq_subset <- function(count_data, coldata, subset_idx,
   return(res)
 }
 
-# =========================================================
-# 4. TEMPORAL ANALYSIS
-# =========================================================
-
-# ---------------------------------------------------------
-# 4.1 RHDV 14DPI vs 4DPI
-# ---------------------------------------------------------
+# analise temporal
 
 idx_rhdv_time <- rownames(coldata) %in%
   rownames(subset(coldata, Condition == "RHDV" & Sampling %in% c("4DPI", "14DPI")))
@@ -416,9 +393,8 @@ save_all_outputs(
   fig_label = "RHDV_14dpi_vs_4dpi_withinRHDV"
 )
 
-# ---------------------------------------------------------
-# 4.2 RCV 14DPI vs 4DPI
-# ---------------------------------------------------------
+# RCV 14DPI vs 4DPI
+
 
 idx_rcv_time <- rownames(coldata) %in%
   rownames(subset(coldata, Condition == "RCV" & Sampling %in% c("4DPI", "14DPI")))
@@ -449,9 +425,7 @@ save_all_outputs(
   fig_label = "RCV_14dpi_vs_4dpi_withinRCV"
 )
 
-# ---------------------------------------------------------
-# 4.3 RCV 14DPI vs CONTROL 14DPI
-# ---------------------------------------------------------
+# RCV 14DPI vs CONTROL 14DPI
 
 col_14_rcv_ctrl <- subset(coldata, Sampling == "14DPI" & Condition %in% c("CONTROL", "RCV"))
 idx_14_rcv_ctrl <- rownames(coldata) %in% rownames(col_14_rcv_ctrl)
@@ -488,9 +462,7 @@ save_all_outputs(
   fig_label = "RCV_vs_Control_14dpi"
 )
 
-# ---------------------------------------------------------
-# 4.4 RHDV 14DPI vs CONTROL 14DPI
-# ---------------------------------------------------------
+# RHDV 14DPI vs CONTROL 14DPI
 
 col_14_rhdv_ctrl <- subset(coldata, Sampling == "14DPI" & Condition %in% c("CONTROL", "RHDV"))
 idx_14_rhdv_ctrl <- rownames(coldata) %in% rownames(col_14_rhdv_ctrl)
@@ -527,9 +499,7 @@ save_all_outputs(
   fig_label = "RHDV_vs_Control_14dpi"
 )
 
-# ---------------------------------------------------------
-# 4.5 RCV 4DPI vs CONTROL 14DPI
-# ---------------------------------------------------------
+# RCV 4DPI vs CONTROL 14DPI
 
 col_4_rcv_ctrl14 <- subset(
   coldata,
@@ -571,9 +541,7 @@ save_all_outputs(
   fig_label = "RCV_vs_Control_4dpi"
 )
 
-# ---------------------------------------------------------
-# 4.6 RHDV 4DPI vs CONTROL 14DPI
-# ---------------------------------------------------------
+# RHDV 4DPI vs CONTROL 14DPI
 
 col_4_rhdv_ctrl14 <- subset(
   coldata,
@@ -615,9 +583,7 @@ save_all_outputs(
   fig_label = "RHDV_vs_Control_4dpi"
 )
 
-# ---------------------------------------------------------
-# 4.7 RHDV vs RCV em 4DPI
-# ---------------------------------------------------------
+# RHDV vs RCV em 4DPI
 
 col_4_virus <- subset(coldata, Sampling == "4DPI" & Condition %in% c("RCV", "RHDV"))
 idx_4_virus <- rownames(coldata) %in% rownames(col_4_virus)
@@ -655,9 +621,7 @@ save_all_outputs(
   fig_label = "RHDV_vs_RCV_4dpi"
 )
 
-# ---------------------------------------------------------
-# 4.8 RHDV vs RCV em 14DPI
-# ---------------------------------------------------------
+# RHDV vs RCV em 14DPI
 
 col_14_virus <- subset(coldata, Sampling == "14DPI" & Condition %in% c("RCV", "RHDV"))
 idx_14_virus <- rownames(coldata) %in% rownames(col_14_virus)

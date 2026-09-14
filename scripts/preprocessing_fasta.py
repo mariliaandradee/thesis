@@ -3,9 +3,6 @@ import os
 import subprocess
 from conf import BASE_DIR, PREPROCESSING_DIR, THREADS, TRIMMOMATIC_PATH, TRUQUE3_PATH
 
-# "java" tem de estar instalado e no PATH do teu Mac (confirma com
-# "java -version"; se nao tiveres, "brew install openjdk" e depois segue
-# as instrucoes do brew para o pores no PATH)
 java_path = "java"
 
 def trimming_plots(forward_file, reverse_file, output_forward, output_reverse):

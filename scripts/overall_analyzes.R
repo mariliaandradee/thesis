@@ -41,11 +41,6 @@ coldata$Condition <- factor(
 )
 coldata$Tissue <- factor(trimws(coldata$Tissue))
 
-# covariavel de batch: sequencing_run (2 niveis, A/B) em vez de Lane (6
-# niveis) - Lane fica confundida com Condition dentro de cada tecido (por
-# ex. no Duodeno a lane A nunca aparece em CONTROL), o que faz o DESeq2
-# recusar o modelo (model matrix not full rank). sequencing_run esta bem
-# mais equilibrada entre tecidos e condicoes.
 coldata$sequencing_run <- factor(trimws(coldata$sequencing_run))
 
 dds_all <- DESeqDataSetFromMatrix(

@@ -27,7 +27,6 @@ tecidos <- tecidos[, c("Comparison", "Level", "Total", "Up", "Down")]
 
 table1 <- rbind(geral, tecidos)
 
-# ordenar: RHDV vs CONTROL, RCV vs CONTROL, RCV vs RHDV; dentro de cada,
 # Global primeiro e depois tecidos por ordem alfabetica
 comparison_order <- c("RHDV vs CONTROL", "RCV vs CONTROL", "RCV vs RHDV")
 level_order <- c("Global", "Duodenum", "Liver", "Spleen", "Thymus")

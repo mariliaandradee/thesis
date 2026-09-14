@@ -3,7 +3,6 @@ library(dplyr)
 library(tidyr)
 library(tibble)
 
-# Se o objeto importado se chama tecidos_per_grupo e ele é a lista:
 
 ### counts genes by group 
 count_deg <- function(res_obj, alpha = 0.05, lfc = 1){

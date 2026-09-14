@@ -152,9 +152,7 @@ def check_required_files() -> None:
 
 def align_reads(preprocessing_dir: str, alignment_dir: str, index_base_name: str, splice_sites_file: str = None) -> None:
     print(f"Searching for FASTQ files in: {preprocessing_dir}")
-    # Os ficheiros locais chamam-se "trimmed_175D_R1.gz" (nao
-    # "..._R1_001.fastq.gz", que era o padrao do cluster e nunca encontrava
-    # nada aqui).
+
     fastq_files = [f for f in os.listdir(preprocessing_dir) if f.startswith("trimmed_") and f.endswith("_R1.gz")]
     print(f"Found {len(fastq_files)} R1 FASTQ files")
 
