@@ -1,0 +1,16 @@
+"Comparison","Level","Total","Up","Down"
+"RHDV vs CONTROL","Global",135,127,8
+"RHDV vs CONTROL","Duodenum",9,7,2
+"RHDV vs CONTROL","Liver",32,30,2
+"RHDV vs CONTROL","Spleen",83,20,63
+"RHDV vs CONTROL","Thymus",0,0,0
+"RCV vs CONTROL","Global",6,4,2
+"RCV vs CONTROL","Duodenum",19,17,2
+"RCV vs CONTROL","Liver",0,0,0
+"RCV vs CONTROL","Spleen",16,2,14
+"RCV vs CONTROL","Thymus",2,1,1
+"RCV vs RHDV","Global",289,157,132
+"RCV vs RHDV","Duodenum",691,637,54
+"RCV vs RHDV","Liver",15,2,13
+"RCV vs RHDV","Spleen",7,6,1
+"RCV vs RHDV","Thymus",36,0,36

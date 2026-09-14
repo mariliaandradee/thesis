@@ -1,0 +1,62 @@
+LOC_original,NCBI_gene_id_current,Novo_simbolo,Descricao,Nota
+LOC100357282,100357282,ZNF462,zinc finger protein 462,
+LOC100337800,100337800,IKBIP,IKBKB interacting protein,
+LOC100340733,100340733,GKN1,gastrokine 1,
+LOC100340860,100340860,KRT32,keratin 32,
+LOC100341936,100341936,CTRB2,chymotrypsinogen B2,
+LOC100342960,100342960,KLHL23,kelch like family member 23,
+LOC100343081,100343081,SYCE1,synaptonemal complex central element protein 1,
+LOC100343468,100343468,AMPH,amphiphysin,
+LOC100343920,100343920,C4BPA,complement component 4 binding protein alpha,
+LOC100343925,100343925,MACROH2A2,macroH2A.2 histone,
+LOC100344043,100344043,SSC5D,scavenger receptor cysteine rich family member with 5 domains,
+LOC100345250,100345250,PIK3R3,phosphoinositide-3-kinase regulatory subunit 3,
+LOC100345779,100345779,HERC6,HECT and RLD domain containing E3 ubiquitin protein ligase family member 6,gene estimulado por interferao (ISG)
+LOC100346409,100346409,TTLL13,tubulin tyrosine ligase like 13,
+LOC100347263,100347263,F13B,coagulation factor XIII B chain,
+LOC100347323,100347323,ZSCAN26,zinc finger and SCAN domain containing 26,
+LOC100348097,100348097,CNTN6,contactin 6,
+LOC100348165,100348165,CCDC9B,coiled-coil domain containing 9B,
+LOC100348758,100348758,SCHIP1,schwannomin interacting protein 1,
+LOC100349447,100349447,TCIM,transcriptional and immune response regulator,
+LOC100349824,100349824,MYL6,myosin light chain 6,
+LOC100350712,100350712,NFIX,nuclear factor I X,
+LOC100349940,100349940,OLAH,oleoyl-ACP hydrolase,
+LOC100351097,100351097,TUBG2,tubulin gamma 2,
+LOC100351363,100351363,ITGAD,integrin subunit alpha D,
+LOC100351826,100351826,MAP3K20,mitogen-activated protein kinase kinase kinase 20,
+LOC100351040,100351040,C7H1orf94,chromosome 7 C1orf94 homolog,
+LOC100353317,100353317,CYP2S1,cytochrome P450 family 2 subfamily S member 1,
+LOC100353349,100353349,PDZRN3,PDZ domain containing ring finger 3,
+LOC100353463,100353463,AOC3,amine oxidase copper containing 3,
+LOC100353947,100353947,CYP2U1,cytochrome P450 family 2 subfamily U member 1,
+LOC100356242,100356242,OASL,2'-5'-oligoadenylate synthetase like,gene estimulado por interferao (ISG) - MUITO frequente nas listas de significativos
+LOC100356369,100356369,CMYA5,cardiomyopathy associated 5,
+LOC100356613,100356613,MUC5AC,mucin 5AC oligomeric mucus/gel-forming,
+LOC100357577,100357577,XIRP2,xin actin binding repeat containing 2,
+LOC100358238,100358238,TFF1,trefoil factor 1,
+LOC100358590,100358590,CYP1B1,cytochrome P450 family 1 subfamily B member 1,
+LOC100358696,100358696,FCGR1A,Fc gamma receptor Ia,
+LOC100008743,108176505,ASPH,aspartate beta-hydroxylase,ID de gene tambem mudou (100008743 -> 108176505)
+LOC100343036,100346001,IFGGA1,interferon-inducible GTPase 1,gene estimulado por interferao (ISG); ID de gene tambem mudou
+LOC100343103,103346294,TSBP1,testis expressed basic protein 1,ID de gene tambem mudou
+LOC103344989,100344009,ADGRB2,adhesion G protein-coupled receptor B2,ID de gene tambem mudou
+LOC103345156,100340127,GABRB1,gamma-aminobutyric acid type A receptor subunit beta1,ID de gene tambem mudou
+LOC103345358,100352788,THSD4,thrombospondin type 1 domain containing 4,ID de gene tambem mudou
+LOC103344988,100344271,ELN,elastin,ID de gene tambem mudou
+LOC103345512,103352092,SRGAP3,SLIT-ROBO Rho GTPase activating protein 3,ID de gene tambem mudou
+LOC103345855,103345878,SDK1,sidekick cell adhesion molecule 1,ID de gene tambem mudou
+LOC103347221,100351025,NID1,nidogen 1,ID de gene tambem mudou
+LOC103346912,103347173,ANO1,anoctamin 1,ID de gene tambem mudou
+LOC103347640,100350149,TRABD2A,TraB domain containing 2A,ID de gene tambem mudou
+LOC103348986,103348965,BHLHE41,basic helix-loop-helix family member e41,ID de gene tambem mudou
+LOC103350775,103350825,PPBP,pro-platelet basic protein (CXCL7),quimiocina inflamatoria; ID de gene tambem mudou
+LOC103351001,108178222,LOC108178222,plasma membrane calcium-transporting ATPase 4,continua LOC (novo numero)
+LOC103352076,100359105,NPAS4,neuronal PAS domain protein 4,ID de gene tambem mudou
+LOC103352392,103346149,PTGIS,prostaglandin I2 synthase,ID de gene tambem mudou
+LOC108175394,100347754,LOC100347754,guanylate-binding protein 3,continua LOC (novo numero)
+LOC108177410,100351505,KIAA0319,KIAA0319 ortholog,ID de gene tambem mudou
+LOC108177735,100342463,LOC100342463,RH-like protein,continua LOC (novo numero)
+LOC108178049,100345259,HERC5,HECT and RLD domain containing E3 ubiquitin protein ligase 5,gene estimulado por interferao (ISG) - frequente
+LOC108178114,100357282,ZNF462,zinc finger protein 462,mesmo alvo que LOC100357282; ID de gene tambem mudou
+LOC108178363,100340267,HERC2,HECT and RLD domain containing E3 ubiquitin protein ligase 2,ID de gene tambem mudou

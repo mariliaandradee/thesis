@@ -1,0 +1,9 @@
+"Comparison","Timepoint","Total","Up","Down"
+"RHDV vs Control","4 dpi",1363,906,457
+"RHDV vs Control","14 dpi",4,2,2
+"RCV vs Control","4 dpi",124,112,12
+"RCV vs Control","14 dpi",5,1,4
+"RHDV vs RCV","4 dpi",787,342,445
+"RHDV vs RCV","14 dpi",10,1,9
+"RHDV 14 dpi vs 4 dpi","within RHDV",1489,498,991
+"RCV 14 dpi vs 4 dpi","within RCV",58,17,41
